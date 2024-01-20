@@ -1,7 +1,7 @@
 Eventos listados
 <br>
 {%for post in posts%}
-{{post.name}}
+<a href="{% url 'event:detail' post.id %}">{{post.name}}</a>
 {%endfor%}
 <br>
 <a href="{% url 'event:create' %}">Crear evento</a>

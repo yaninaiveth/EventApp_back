@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import View
 from .forms import PostCreateForm
 from .models import EventPost
@@ -37,7 +37,16 @@ class EventCreateView(View):
         }
         return render(request, 'event_create.html', context)
     
-# Crear vista que nos permita eliminar el producto
+# Vista para poder ver los modelos
+
+class EventDetailView(View):
+    def get(self, request, pk,  *args, **kwargs):
+        post = get_object_or_404(EventPost, pk=pk)
+        context={
+            'post':post
+        }
+        return render (request, 'event_detail.html', context)
+# Crear vista que nos permita eliminar el evento
 # Crear vista para eliminar un evento
     
 

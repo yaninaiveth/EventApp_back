@@ -6,8 +6,9 @@ from .models import EventPost
 # Lista los eventos
 class EventListView(View):
     def get(self, request, *args, **kwargs):
+        posts = EventPost.objects.all()
         context={
-            
+            'posts':posts
         }
         return render(request, 'event_list.html', context)
 
@@ -35,5 +36,10 @@ class EventCreateView(View):
             
         }
         return render(request, 'event_create.html', context)
+    
+# Crear vista que nos permita eliminar el producto
+# Crear vista para eliminar un evento
+    
 
+    
 

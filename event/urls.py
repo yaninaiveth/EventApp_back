@@ -5,5 +5,5 @@ app_name="event"
 
 urlpatterns = [
     path('', EventListView.as_view(), name="home"),
-    path('create', EventCreateView.as_view(), name="create")
+    path('create/', EventCreateView.as_view(), name="create")
 ]

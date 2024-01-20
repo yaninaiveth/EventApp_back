@@ -2,11 +2,11 @@ from django.urls import path
 
 from accounts.api.views import login, logout
 
-appname = 'usersapi'
+app_name = 'usersapi'
 
-urlpattern = [
-        path('/user/login/',    login.as_view(), name='login'),
-        path('/user/logout/',   logout.as_view(), name='logout')
+urlpatterns = [
+        path('login/',    login.as_view(), name='login'),
+        path('logout/',   logout.as_view(), name='logout')
 ]
 
 

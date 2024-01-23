@@ -1,0 +1,7 @@
+<form method="POST">
+    {% csrf_token %}
+    Nombre{{form.name}}
+    <br>
+    Descripción{{form.description}}
+    <button type="submit">Crear Evento</button>    
+</form>

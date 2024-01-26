@@ -6,8 +6,31 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
-class login(APIView):
-    def get(self, resquest):
+
+class OAuthRegister(APIView):
+    def get(self, request):
+        pass
+    def post(self, request):
+        pass
+
+class OAuthLogin(APIView):
+    def get(self, request):
+        pass
+
+    def post(self, request):
+        pass
+
+
+
+class Register(APIView):
+    def get(self, request):
+        pass
+
+    def post(self, request):
+        pass
+
+class Login(APIView):
+    def get(self, request):
         #userobjects = User.objects.all()
         #serializer = UserSerializer(userobjects)
         print('login working properly')
@@ -20,7 +43,7 @@ class login(APIView):
         msg = {'message':'post message'}
         return JsonResponse(msg)
 
-class logout(APIView):
+class Logout(APIView):
     
     def get(self, request):
         print('logout working properly')
